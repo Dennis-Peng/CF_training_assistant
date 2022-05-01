@@ -1,2 +1,3 @@
 backend/gen/*
 **/__pycache__
+.vscode/*
