@@ -1,10 +1,10 @@
-CREATE DATABASE cf_assistant;
+CREATE DATABASE IF NOT EXISTS cf_assistant;
 
 /*
 用户基本信息
 主键：用户id
 */
-CREATE TABLE database.users(
+CREATE TABLE IF NOT EXISTS database.users(
     uid     SERIAL      NOT NULL,   --系统内用户id
     name    TEXT        NOT NULL,   --系统内用户名
     passwd  char(16)    NOT NULL,   --用户密码的md5值
@@ -18,7 +18,7 @@ CREATE TABLE database.users(
 上次生成推荐题时选择的tag，和Rating区间
 主键：用户id(外键->user.id)
 */
-CREATE TABLE database.preferences(
+CREATE TABLE IF NOT EXISTS IF NOT EXISTS database.preferences(
     uid     INT         NOT NULL,   --用户id
     rating  INT,                    --用户当前的rating
     lb_rt   INT,                    --用户偏好的rating区间下限
