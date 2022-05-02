@@ -43,4 +43,5 @@ def initialize_database(connect):
                         PRIMARY KEY (tagid)\
                     );"
                 )
+    cur.close()  #使用过的游标及时关闭
     
